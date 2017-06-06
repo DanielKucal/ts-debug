@@ -13,25 +13,25 @@ export class Debugger implements Console {
     public assert(value: any, message?: string, ...optionalParams: any[]): void;
     public assert(test?: boolean, message?: string, ...optionalParams: any[]): void;
     public assert(value?, message?: string, ...optionalParams: any[]): void {
-        return this.doIfEnabled(() => this.console.assert(value, message, optionalParams));
+        return this.doIfEnabled(() => this.console.assert(value, message, ...optionalParams));
     }
 
     public dir(obj: any, options?: { showHidden?: boolean; depth?: number; colors?: boolean }): void;
     public dir(value?: any, ...optionalParams: any[]): void;
     public dir(obj?: any, ...options): void {
-        return this.doIfEnabled(() => this.console.dir(obj, options));
+        return this.doIfEnabled(() => this.console.dir(obj, ...options));
     }
 
     public error(message?: any, ...optionalParams: any[]): void {
-        return this.doIfEnabled(() => this.console.error(this.addPrefix(message), optionalParams));
+        return this.doIfEnabled(() => this.console.error(this.addPrefix(message), ...optionalParams));
     }
 
     public info(message?: any, ...optionalParams: any[]): void {
-        return this.doIfEnabled(() => this.console.info(this.addPrefix(message), optionalParams));
+        return this.doIfEnabled(() => this.console.info(this.addPrefix(message), ...optionalParams));
     }
 
     public log(message?: any, ...optionalParams: any[]): void {
-        return this.doIfEnabled(() => this.console.log(this.addPrefix(message), optionalParams));
+        return this.doIfEnabled(() => this.console.log(this.addPrefix(message), ...optionalParams));
     }
 
     public time(label: string): void;
@@ -47,11 +47,11 @@ export class Debugger implements Console {
     }
 
     public trace(message?: any, ...optionalParams: any[]): void {
-        return this.doIfEnabled(() => this.console.trace(this.addPrefix(message), optionalParams));
+        return this.doIfEnabled(() => this.console.trace(this.addPrefix(message), ...optionalParams));
     }
 
     public warn(message?: any, ...optionalParams: any[]): void {
-        return this.doIfEnabled(() => this.console.warn(this.addPrefix(message), optionalParams));
+        return this.doIfEnabled(() => this.console.warn(this.addPrefix(message), ...optionalParams));
     }
 
     public clear(): void {
@@ -63,7 +63,7 @@ export class Debugger implements Console {
     }
 
     public debug(message?: any, ...optionalParams: any[]): void {
-        return this.doIfEnabled(() => this.console.debug(this.addPrefix(message), optionalParams));
+        return this.doIfEnabled(() => this.console.debug(this.addPrefix(message), ...optionalParams));
     }
 
     public dirxml(value: any): void {
@@ -71,7 +71,7 @@ export class Debugger implements Console {
     }
 
     public exception(message?: string, ...optionalParams: any[]): void {
-        return this.doIfEnabled(() => this.console.exception(this.addPrefix(message), optionalParams));
+        return this.doIfEnabled(() => this.console.exception(this.addPrefix(message), ...optionalParams));
     }
 
     public group(groupTitle?: string): void {
@@ -103,7 +103,7 @@ export class Debugger implements Console {
     }
 
     public table(...data: any[]): void {
-        return this.doIfEnabled(() => this.console.table(data));
+        return this.doIfEnabled(() => this.console.table(...data));
     }
 
     protected doIfEnabled(action: Function): any {

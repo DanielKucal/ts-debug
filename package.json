@@ -1,12 +1,13 @@
 {
   "name": "ts-debug",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Configurable console wrapper for Typescript",
   "main": "./debug",
   "typings": "./debug",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "$(npm bin)/tsc"
+    "build": "$(npm bin)/tsc",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",

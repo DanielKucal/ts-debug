@@ -13,7 +13,10 @@ var Debugger = (function () {
         for (var _i = 2; _i < arguments.length; _i++) {
             optionalParams[_i - 2] = arguments[_i];
         }
-        return this.doIfEnabled(function () { return _this.console.assert(value, message, optionalParams); });
+        return this.doIfEnabled(function () {
+            return (_a = _this.console).assert.apply(_a, [value, message].concat(optionalParams));
+            var _a;
+        });
     };
     Debugger.prototype.dir = function (obj) {
         var _this = this;
@@ -21,7 +24,10 @@ var Debugger = (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             options[_i - 1] = arguments[_i];
         }
-        return this.doIfEnabled(function () { return _this.console.dir(obj, options); });
+        return this.doIfEnabled(function () {
+            return (_a = _this.console).dir.apply(_a, [obj].concat(options));
+            var _a;
+        });
     };
     Debugger.prototype.error = function (message) {
         var _this = this;
@@ -29,7 +35,10 @@ var Debugger = (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             optionalParams[_i - 1] = arguments[_i];
         }
-        return this.doIfEnabled(function () { return _this.console.error(_this.addPrefix(message), optionalParams); });
+        return this.doIfEnabled(function () {
+            return (_a = _this.console).error.apply(_a, [_this.addPrefix(message)].concat(optionalParams));
+            var _a;
+        });
     };
     Debugger.prototype.info = function (message) {
         var _this = this;
@@ -37,7 +46,10 @@ var Debugger = (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             optionalParams[_i - 1] = arguments[_i];
         }
-        return this.doIfEnabled(function () { return _this.console.info(_this.addPrefix(message), optionalParams); });
+        return this.doIfEnabled(function () {
+            return (_a = _this.console).info.apply(_a, [_this.addPrefix(message)].concat(optionalParams));
+            var _a;
+        });
     };
     Debugger.prototype.log = function (message) {
         var _this = this;
@@ -45,7 +57,10 @@ var Debugger = (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             optionalParams[_i - 1] = arguments[_i];
         }
-        return this.doIfEnabled(function () { return _this.console.log(_this.addPrefix(message), optionalParams); });
+        return this.doIfEnabled(function () {
+            return (_a = _this.console).log.apply(_a, [_this.addPrefix(message)].concat(optionalParams));
+            var _a;
+        });
     };
     Debugger.prototype.time = function (label) {
         var _this = this;
@@ -61,7 +76,10 @@ var Debugger = (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             optionalParams[_i - 1] = arguments[_i];
         }
-        return this.doIfEnabled(function () { return _this.console.trace(_this.addPrefix(message), optionalParams); });
+        return this.doIfEnabled(function () {
+            return (_a = _this.console).trace.apply(_a, [_this.addPrefix(message)].concat(optionalParams));
+            var _a;
+        });
     };
     Debugger.prototype.warn = function (message) {
         var _this = this;
@@ -69,7 +87,10 @@ var Debugger = (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             optionalParams[_i - 1] = arguments[_i];
         }
-        return this.doIfEnabled(function () { return _this.console.warn(_this.addPrefix(message), optionalParams); });
+        return this.doIfEnabled(function () {
+            return (_a = _this.console).warn.apply(_a, [_this.addPrefix(message)].concat(optionalParams));
+            var _a;
+        });
     };
     Debugger.prototype.clear = function () {
         var _this = this;
@@ -85,7 +106,10 @@ var Debugger = (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             optionalParams[_i - 1] = arguments[_i];
         }
-        return this.doIfEnabled(function () { return _this.console.debug(_this.addPrefix(message), optionalParams); });
+        return this.doIfEnabled(function () {
+            return (_a = _this.console).debug.apply(_a, [_this.addPrefix(message)].concat(optionalParams));
+            var _a;
+        });
     };
     Debugger.prototype.dirxml = function (value) {
         var _this = this;
@@ -97,7 +121,10 @@ var Debugger = (function () {
         for (var _i = 1; _i < arguments.length; _i++) {
             optionalParams[_i - 1] = arguments[_i];
         }
-        return this.doIfEnabled(function () { return _this.console.exception(_this.addPrefix(message), optionalParams); });
+        return this.doIfEnabled(function () {
+            return (_a = _this.console).exception.apply(_a, [_this.addPrefix(message)].concat(optionalParams));
+            var _a;
+        });
     };
     Debugger.prototype.group = function (groupTitle) {
         var _this = this;
@@ -133,7 +160,10 @@ var Debugger = (function () {
         for (var _i = 0; _i < arguments.length; _i++) {
             data[_i] = arguments[_i];
         }
-        return this.doIfEnabled(function () { return _this.console.table(data); });
+        return this.doIfEnabled(function () {
+            return (_a = _this.console).table.apply(_a, data);
+            var _a;
+        });
     };
     Debugger.prototype.doIfEnabled = function (action) {
         if (this.isEnabled) {
