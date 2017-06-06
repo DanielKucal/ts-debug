@@ -1,6 +1,6 @@
 {
   "name": "ts-debug",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Configurable console wrapper for Typescript",
   "main": "./debug",
   "typings": "./debug",
