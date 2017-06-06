@@ -1,0 +1,23 @@
+# Typescript Debugger
+## Console Wrappper
+This tiny lib written in Typescript allows you to leave your debugging logs inside your project without worries of removing them for production environment.
+
+### Installation
+```
+npm install --save ts-debug
+```
+
+### Usage
+`Debugger`'s instance has the exactly same methods as standard `console`. Its constructor takes 3 parameters: 
+  + `console: Console` - object implementing Console interface, e.g. `console` or its wrapper
+  + `isEnabled: boolean = true` - determines if Debugger should be enabled (you shoud pass here `false` to prevent displaying console output in production environment)
+  + `prefix: string = ''` - specifies prefix for console outputs, e.g. `"[DEBUG] "`
+
+#### Example:
+```
+const Config = { isProd: false }; // example config in your application
+
+const debug = new Debugger(console, !Config.isProd, '[DEBUG] ');
+debug.log('Debugger in enabled!');
+debug.warn('An error occured while processing: ', { example: 'object' });
+```
