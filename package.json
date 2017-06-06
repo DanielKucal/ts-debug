@@ -1,0 +1,33 @@
+{
+  "name": "ts-debug",
+  "version": "1.0.0",
+  "description": "Configurable console wrapper for Typescript",
+  "main": "debug",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "$(npm bin)/tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielKucal/ts-debug.git"
+  },
+  "keywords": [
+    "typescript",
+    "debug",
+    "console",
+    "wrapper",
+    "debugging",
+    "angular",
+    "configurable"
+  ],
+  "author": "Daniel Kucal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielKucal/ts-debug/issues"
+  },
+  "homepage": "https://github.com/DanielKucal/ts-debug#readme",
+  "devDependencies": {
+    "@types/node": "^7.0.27",
+    "typescript": "^2.3.4"
+  }
+}
