@@ -1,6 +1,6 @@
 {
   "name": "ts-debug",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Configurable console wrapper for Typescript",
   "main": "./debug",
   "typings": "./debug",
@@ -28,8 +28,10 @@
     "url": "https://github.com/DanielKucal/ts-debug/issues"
   },
   "homepage": "https://github.com/DanielKucal/ts-debug#readme",
+  "dependencies": {
+    "@types/node": "^7.0.27"
+  },
   "devDependencies": {
-    "@types/node": "^7.0.27",
     "typescript": "^2.3.4"
   }
 }
