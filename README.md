@@ -15,9 +15,12 @@ npm install --save ts-debug
 
 #### Example:
 ```
+import { Debugger } from 'ts-debug';
 const Config = { isProd: false }; // example config in your application
 
 const debug = new Debugger(console, !Config.isProd, '[DEBUG] ');
-debug.log('Debugger in enabled!');
+debug.log('Debugger is enabled!');
 debug.warn('An error occured while processing: ', { example: 'object' });
 ```
+
+You can see real-life usage of this lib in [ngx-store](https://github.com/zoomsphere/ngx-store).

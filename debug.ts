@@ -1,5 +1,5 @@
 export class Debugger implements Console {
-    public Console: NodeJS.ConsoleConstructor;
+    public Console: any;
     protected console: Console;
     protected isEnabled: boolean;
     protected prefix: string = '';

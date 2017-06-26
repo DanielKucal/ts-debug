@@ -1,6 +1,5 @@
-/// <reference types="node" />
 export declare class Debugger implements Console {
-    Console: NodeJS.ConsoleConstructor;
+    Console: any;
     protected console: Console;
     protected isEnabled: boolean;
     protected prefix: string;
