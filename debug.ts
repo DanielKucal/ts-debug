@@ -106,6 +106,19 @@ export class Debugger implements Console {
         return this.doIfEnabled(() => this.console.table(...data));
     }
 
+    /**
+     * Throws usual error in debug mode and non-blocking otherwise
+     * @param {Error} error
+     */
+    public throw(error: Error) {
+        if (this.isEnabled) {
+            throw error;
+        }
+        setTimeout(() => {
+            throw error;
+        });
+    }
+
     protected doIfEnabled(action: Function): any {
         if (this.isEnabled) {
             return action();

@@ -24,3 +24,7 @@ debug.warn('An error occured while processing: ', { example: 'object' });
 ```
 
 You can see real-life usage of this lib in [ngx-store](https://github.com/zoomsphere/ngx-store).
+
+
+### Additional methods
+- `throw(error: Error)` - throws usual (sync) error in debug mode and non-blocking (async) otherwise
