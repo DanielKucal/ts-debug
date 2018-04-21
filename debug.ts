@@ -10,6 +10,10 @@ export class Debugger implements Console {
         this.prefix = prefix;
     }
 
+    public get memory(): any {
+      return this.doIfEnabled(() => console.hasOwnProperty('memory') && console.memory);
+    }
+
     public assert(value: any, message?: string, ...optionalParams: any[]): void;
     public assert(test?: boolean, message?: string, ...optionalParams: any[]): void;
     public assert(value?, message?: string, ...optionalParams: any[]): void {
@@ -44,6 +48,24 @@ export class Debugger implements Console {
     public timeEnd(timerName?: string): void;
     public timeEnd(label?: string): void {
         return this.doIfEnabled(() => this.console.timeEnd(label));
+    }
+
+    public timeStamp(label: string): void;
+    public timeStamp(timerName?: string): void;
+    public timeStamp(label?: string): void {
+        return this.doIfEnabled(() => this.console.timeStamp(label));
+    }
+
+    public timeline(label: string): void;
+    public timeline(timerName?: string): void;
+    public timeline(label?: string): void {
+        return this.doIfEnabled(() => this.console.timeline(label));
+    }
+
+    public timelineEnd(label: string): void;
+    public timelineEnd(timerName?: string): void;
+    public timelineEnd(label?: string): void {
+        return this.doIfEnabled(() => this.console.timelineEnd(label));
     }
 
     public trace(message?: any, ...optionalParams: any[]): void {
@@ -84,6 +106,10 @@ export class Debugger implements Console {
 
     public groupEnd(): void {
         return this.doIfEnabled(() => this.console.groupEnd());
+    }
+
+    public markTimeline(label?: string): void {
+        return this.doIfEnabled(() => this.console.markTimeline(label));
     }
 
     public msIsIndependentlyComposed(element: Element): boolean {
