@@ -30,6 +30,6 @@
   "homepage": "https://github.com/DanielKucal/ts-debug#readme",
   "dependencies": {},
   "devDependencies": {
-    "typescript": "^2.3.4"
+    "typescript": "^2.8.3"
   }
 }
