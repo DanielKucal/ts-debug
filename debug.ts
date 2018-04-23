@@ -137,6 +137,7 @@ export class Debugger implements Console {
      * @param {Error} error
      */
     public throw(error: Error) {
+        error.message = this.addPrefix(error.message);
         if (this.isEnabled) {
             throw error;
         }
