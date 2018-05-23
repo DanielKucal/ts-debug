@@ -1,5 +1,6 @@
 export class Debugger implements Console {
     public Console: any;
+    public countReset: any;
     protected console: Console;
     protected isEnabled: boolean;
     protected prefix: string = '';
