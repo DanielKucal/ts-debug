@@ -19,6 +19,10 @@ export class Debugger implements Console {
     public assert(value?, message?: string, ...optionalParams: any[]): void {
         return this.doIfEnabled(() => this.console.assert(value, message, ...optionalParams));
     }
+    
+    public countReset(): void {
+        return this.doIfEnabled(() => this.console.countReset());
+    }
 
     public dir(obj: any, options?: { showHidden?: boolean; depth?: number; colors?: boolean }): void;
     public dir(value?: any, ...optionalParams: any[]): void;
