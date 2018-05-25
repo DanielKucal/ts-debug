@@ -1,6 +1,5 @@
 export class Debugger implements Console {
     public Console: any;
-    public countReset: any;
     protected console: Console;
     protected isEnabled: boolean;
     protected prefix: string = '';
@@ -19,6 +18,10 @@ export class Debugger implements Console {
     public assert(test?: boolean, message?: string, ...optionalParams: any[]): void;
     public assert(value?, message?: string, ...optionalParams: any[]): void {
         return this.doIfEnabled(() => this.console.assert(value, message, ...optionalParams));
+    }
+    
+    public countReset(): void {
+        return this.doIfEnabled(() => this.console.countReset());
     }
 
     public dir(obj: any, options?: { showHidden?: boolean; depth?: number; colors?: boolean }): void;
