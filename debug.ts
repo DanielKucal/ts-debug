@@ -54,6 +54,10 @@ export class Debugger implements Console {
         return this.doIfEnabled(() => this.console.timeEnd(label));
     }
 
+    public timeLog(label: string, ...data: any[]): void {
+        return this.doIfEnabled(() => this.console.timeLog(label, data));
+    }
+
     public timeStamp(label: string): void;
     public timeStamp(timerName?: string): void;
     public timeStamp(label?: string): void {
