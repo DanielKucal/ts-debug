@@ -28,3 +28,8 @@ You can see real-life usage of this lib in [ngx-store](https://github.com/zoomsp
 
 ### Additional methods
 - `throw(error: Error)` - throws usual (sync) error in debug mode and non-blocking (async) otherwise
+
+
+### Compatibility
+For TypeScript 3+ use v1.3+
+For older versions use v1.2

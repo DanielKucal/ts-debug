@@ -120,20 +120,12 @@ export class Debugger implements Console {
         return this.doIfEnabled(() => this.console.markTimeline(label));
     }
 
-    public msIsIndependentlyComposed(element: Element): boolean {
-        return this.doIfEnabled(() => this.console.msIsIndependentlyComposed(element));
-    }
-
     public profile(reportName?: string): void {
         return this.doIfEnabled(() => this.console.profile(reportName));
     }
 
     public profileEnd(): void {
         return this.doIfEnabled(() => this.console.profileEnd());
-    }
-
-    public select(element: Element): void {
-        return this.doIfEnabled(() => this.console.select(element));
     }
 
     public table(...data: any[]): void {
